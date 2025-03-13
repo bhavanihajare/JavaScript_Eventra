@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+   
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+<script>
+
+
+
+    let b=setInterval(myclock,1000)
+    function myclock()
+    {
+        let d=new Date()
+        // let dd=d.getDate()
+        // let mm=d.getMonth()+1
+        // let yy=d.getFullYear()
+
+        // let date=dd+"-"+mm+"-"+yy
+        document.getElementById("d1").innerHTML=d.toLocaleTimeString()
+        document.getElementById("d2").innerHTML=d.toLocaleDateString()
+    }
+
+
+    function a()
+    {
+    
+        let total=parseInt(localStorage.getItem('etotal'))
+        document.getElementById("etotal1").value=total 
+       
+     
+    let email=localStorage.getItem('t6')
+    
+
+  
+    document.getElementById("e1").innerHTML=email
+    document.getElementById("e2").innerHTML=email
+    
+
+    let name1=document.getElementById('t1').value
+    let dob1=document.getElementById('t2').value
+    let city1=document.getElementById('t3').value
+    let pincode1=document.getElementById('t4').value
+    let address1=document.getElementById('t5').value
+    let email1=document.getElementById('t6').value
+    let password1=document.getElementById('t7').value
+    }
+
+    function total()
+    {
+        // let total=localStorage.getItem('etotal')
+        let t=parseInt(localStorage.getItem('etotal'))
+    let emembers=parseInt(document.getElementById("members").value)
+    let echarge=parseInt(document.getElementById("charge").value)
+    document.getElementById("etotal").value=emembers * echarge
+    
+    // document.getElementById("etotal1").value=emembers * echarge
+
+    let extarc=parseInt(document.getElementById("extra_c").value)
+    let tax1=parseInt(document.getElementById("tax").value)
+    let n4=emembers * echarge
+    let n5=t + extarc
+    let n7=n5 * tax1 / 100
+ //  let n7=n4+n5*n6/100
+    document.getElementById("gtotal").value=n5 + n7
+  
+}
+
+  
+
+   function d()
+   {
+    
+    let ename=document.getElementById('ename').value
+    let edate=document.getElementById('edate').value
+    let etime=document.getElementById('etime').value
+    let members=document.getElementById('members').value
+    let charge=document.getElementById('charge').value
+    let etotal=document.getElementById('etotal').value
+    
+
+
+    localStorage.setItem('ename',ename)
+    localStorage.setItem('edate',edate)
+    localStorage.setItem('etime',etime)
+    localStorage.setItem('members',members)
+    localStorage.setItem('charge',charge)
+    localStorage.setItem('etotal',etotal)
+    
+    
+   
+    
+    
+   }
+
+  function c()
+  {
+    let extrac=document.getElementById('extra_c').value
+    let tax=document.getElementById('tax').value
+    let gtotal=document.getElementById('gtotal').value 
+
+    localStorage.setItem('extra_c',extrac)
+    localStorage.setItem('tax',tax)
+    localStorage.setItem('gtotal',gtotal)
+  }
+   
+</script>
+<body onload="a()" >
+
+    <div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-4 bg-dark text-light p-3">
+            <h1>
+                Eventra
+            </h1>
+        </div>
+    
+        <div class="col-lg-8 bg-dark p-3" >
+        <nav class="nav navbar-expand-lg ms-5">
+            <ul class="nav navbar ms-5">
+                <li class="nav-item ms-5"><a href="#" class="nav-link  text-light ms-5">HOME</a></li>
+                <li class="nav-item ms-5"><a href="#" class="nav-link text-light ">ABOUT</a></li>
+                <li class="nav-item dropdown ms-5"><a href="category.html"  class="nav-link text-light dropdown-toggle" data-bs-toggle="dropdown" role="button">SERVICES</a>
+                    <ul class="dropdown-menu">
+                        <li class="nav-item"><a href="" class="dropdown-item nav-link ">service</a></li>
+                        <li class="nav-item"><a href="" class="dropdown-item nav-link">service</a></li>
+                        <li class="nav-item"><a href="" class="dropdown-item nav-link">service</a></li>
+                        <li class="nav-item"><a href="" class="dropdown-item nav-link">service</a></li>
+                    </ul></li>
+                <li class="nav-item ms-5"><a href="#" class="nav-link text-light">CONTACT</a></li>
+            </ul>
+        </nav>
+        </div>
+       </div>
+       </div>
+  
+<div class="container-fluid">
+    <div class="row bg-secondary">
+        <div class="col-sm-6 p-2" >
+            <h1 id="d1" class="  text-light" style="margin-left: 230px;"> </h1>
+        </div>
+        <div class="col-sm-6 p-2">
+           
+            <h1 id="d2" class=" text-light" style="margin-left: 200px;"> </h1>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid" style="background-image: url(back2.jpg);  width: 100%; height: 700px;">
+    <div class="row">
+        <div class="col-sm-6  ">
+            <form action="" method="get" class="ms-5">
+
+            <table class="ms-5 text-light">
+            <tr >
+            <th colspan="2" class="text-center fs-1 pt-3" style="text-decoration: underline;">EVENT DETAILS</th>
+            </tr>
+
+            <tr>
+            <td class="fs-5 pt-3" >USER NAME : </td>
+            <td class="fs-5 pt-3"><span id="e1"> </span></td>
+            </tr> 
+
+            <tr>
+            <td class="fs-5 pt-3">EVENT NAME :</td>
+            <td class="fs-5 pt-3"> <input type="text" id="ename"  name="EVENT NAME" class="form-control fs-5"></td>
+            </tr>
+
+            <tr>
+            <td class="fs-5 pt-3">EVENT DATE : </td>
+            <td class="fs-5 pt-3"><input type="date" id="edate" class="form-control" ></td>
+            </tr>
+
+            <tr>
+            <td class="fs-5 pt-3">EVENT TIME :</td>
+            <td class="fs-5 pt-3"> <input type="time" id="etime" class="form-control"></td>
+            </tr>
+            
+            <tr>
+            <td class="fs-5 pt-3" >NO OF MEMBER :</td>
+            <td class="fs-5 pt-3"> <input type="text" id="members" class="form-control"></td>
+            </tr>
+
+            <tr>
+            <td class="fs-5 pt-3">CHARGE MEMBER:</td>
+            <td class="fs-5 pt-3"> <input type="number" id="charge" onblur="total()" class="form-control"></td>
+            </tr>
+
+            <tr>
+            <td class="fs-5 pt-3">TOTAL : </td>
+            <td class="fs-5 pt-3"><input type="number" id="etotal" class="form-control"></td>
+            </tr>
+
+            <tr>
+            <td class="text-center pt-3 " colspan="2"><input type="submit" onclick="d()" id="q1" value="submit" class="btn btn-dark fs-5"></td>
+            </tr>
+
+            </table>
+            </form>
+        </div>
+
+        <div class="col-sm-6">
+            <form action="next2.html" method="get" class="ms-5">
+
+            <table class="ms-5 text-light">
+            <tr>
+            <th class="text-center fs-1 pt-3" colspan="2" style="text-decoration: underline;">GNERATE BILL</th>
+            </tr>
+            
+            <tr>
+            <td class="fs-5 pt-3">USER NAME :</td>
+            <td class="fs-5 pt-3"> <span id="e2"> </span></td>
+            </tr>
+
+            <tr>
+            <td class="fs-5 pt-3">TOTAL :</td>
+            <td class="fs-5 pt-3"> <input type="text" id="etotal1" class="form-control"></td>
+            </tr>
+
+            <tr>
+            <td class="fs-5 pt-3">EXTRA CHARGES :</td>
+            <td class="fs-5 pt-3"> <input type="text" id="extra_c" class="form-control"></td>
+            </tr>
+
+            <tr>
+            <td class="fs-5 pt-3">GST TAX :</td>
+            <td class="fs-5 pt-3"> <input type="text" id="tax" onblur="total()" class="form-control"></td>
+            </tr>
+
+            <tr>
+            <td class="fs-5 pt-3">GRAND TOTAL :</td>
+            <td class="fs-5 pt-3"> <input type="text" id="gtotal" class="form-control"></td>
+            </tr>
+
+            <tr>
+            <td class="text-center pt-3 " colspan="2"><input type="submit" id="s2" value="PRINT" onclick="c()" class="btn btn-dark fs-5"></td>
+            </tr>
+            </table>
+            </form>
+        </div>
+    </div>
+
+    <div class="row mt-5 text-center">
+        <div class="col-lg-12" style="background-color: black; color: rgb(224, 207, 111);">
+            <p class="mt-4"><i class="fa fa-whatsapp  rounded-circle  p-2 fs-5"></i>
+                <i class="fa fa-twitter ms-3 rounded-circle  p-2 fs-5"></i>
+                <i class="fa fa-instagram  ms-3 rounded-circle  p-2 fs-5"></i>
+                <i class="fa fa-skype  ms-3 rounded-circle  p-2 fs-5"></i>
+                <i class="fa fa-facebook  ms-3 rounded-circle  p-2 fs-5"></i></p>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-3 bg-dark"></div>
+        <div class="col-lg-9 bg-dark" >
+            <div class="text-center">
+            <nav class="navbar navbar-expand-lg">
+                <ul class="navbar-nav ms-5"> 
+                <li class="nav-item ms-4"><a href="" class="nav-link text-light">Home</a></li> 
+                <li class="nav-item ms-4"><a href="" class="nav-link text-light">About</a></li>  
+               <li class="nav-item ms-4"><a href="" class="nav-link text-light">Services</a></li>
+               <li class="nav-item ms-4"><a href="" class="nav-link text-light">News & Articles</a></li>
+               <li class="nav-item ms-4"><a href="" class="nav-link text-light">Content</a></li>  
+               <li class="nav-item ms-4"><a href="" class="nav-link text-light">Signup</a></li>         
+                </ul>
+            </nav>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</body>
+<body onload="e()">
+    
+</body>
+</html>
+

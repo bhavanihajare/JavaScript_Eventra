@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <script>
+        window.print()
+    </script>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+<script>
+
+
+
+
+
+    function a()
+    {
+     
+    let email=localStorage.getItem('t6')
+    let ename=localStorage.getItem('ename')
+    let tax=localStorage.getItem('tax')
+    let gtotal=localStorage.getItem('gtotal')
+    let members=localStorage.getItem('members')
+
+        document.getElementById('user').innerHTML=email
+        document.getElementById('ename').innerHTML=ename
+        document.getElementById('tax').innerHTML=tax
+        document.getElementById('gtotal').innerHTML=gtotal
+        document.getElementById('members').innerHTML=members
+
+    let edate=localStorage.getItem('edate')
+    let etime=localStorage.getItem('etime')
+    let charge=localStorage.getItem('charge')
+   
+        document.getElementById('edate').innerHTML=edate
+        document.getElementById('etime').innerHTML=etime
+        document.getElementById('charge').innerHTML=charge
+    }
+
+   
+
+  
+
+
+
+  
+   
+</script>
+<body onload="a()">
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="text-center">Eventra Pvt Ltd</h1>
+                <h2 class="text-center">Shirur Park</h2>
+                <h1 class="text-center">Vidyanagar - 580021</h1>
+            </div>
+        </div>
+    </div>
+  <hr class="border-4">
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-6" >
+            <h1 id="d1"> </h1>
+        </div>
+        <div class="col-sm-6">
+           
+            <h1 id="d2"> </h1>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-1"></div>
+        <div class="col-sm-5">
+            <form action="" method="get" class="ms-5">
+            <table class="" >
+                <tr>
+            <td class="fs-5 pt-2">USER ID :</td>
+            <td class="fs-5 pt-2"> <span id="user"> </span></td>
+                </tr>
+
+                <tr>
+            <td class="fs-5 pt-2">EVENT NAME :</td>
+            <td class="fs-5 pt-2"><span id="ename"> </span></td>
+            </tr>
+
+            <tr>
+            <td class="fs-5 pt-2">GST TAX :</td>
+            <td class="fs-5 pt-2"> <span id="tax"> </span></td>
+            </tr>
+
+            <tr>
+            <td class="fs-5 pt-2">GRAND TOTAL :</td>
+            <td class="fs-5 pt-2"> <span id="gtotal"> </span></td>
+            </tr>
+
+            <tr>
+            <td class="fs-5 pt-2">NO OF MEMBER :</td>
+            <td class="fs-5 pt-2"> <span id="members"> </span></td>
+            </tr>
+            
+            </table>
+            </form>
+        </div>
+
+        <div class="col-sm-1"></div>
+        <div class="col-sm-5">
+            <form action="" method="get" class="ms-5">
+                <table class="" >
+                    <tr>
+                <td class="fs-5 pt-2">EVENT DATE :</td>
+                <td class="fs-5 pt-2"> <span id="edate"> </span></td>
+                    </tr>
+
+                    <tr>
+                <td class="fs-5 pt-2">EVENT TIME :</td>
+                <td class="fs-5 pt-2"> <span id="etime"> </span></td>
+                    </tr>
+
+                    <tr>
+                <td class="fs-5 pt-2">CHARGE :</td>
+                <td class="fs-5 pt-2"> <span id="charge"> </span></td>
+                    </tr>
+
+                </table>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+
